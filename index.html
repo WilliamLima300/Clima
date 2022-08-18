@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Clima</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body>
+    <!-- Menu de pesquisa da cidade e pesquisa por geolocalização-->
+
+    <div class="main">
+      <header><i>&larr;</i>Como está o tempo hoje ?</header>
+
+      <section class="main-input">
+        <p class="input-txt"></p>
+
+        <div class="containder-input">
+          <input
+            type="text"
+            spellcheck="false"
+            placeholder="Digite o nome da cidade"
+            required
+          />
+
+          <button>Pesquisar por geolocalização</button>
+        </div>
+      </section>
+
+      <!-- Resultados do clima vindo do API -->
+
+      <section class="main-clima">
+        <!-- Cidade pesquisada ou geolocalização -->
+        <div class="local">
+          <span>_, _</span>
+        </div>
+
+        <!-- Icone do clima -->
+        <img src="" alt="Icone mostrando o clima" />
+
+        <div class="temperatura">
+          <span class="numero">_</span>
+
+          <span class="grau">°</span>C
+        </div>
+
+        <div class="clima">_ _</div>
+
+        <div class="containder-clima">
+          <!-- Temperatura max e min do clima -->
+
+          <div class="containder-clima-div">
+            <div class="detalhes">
+              <div class="temperatura">
+                <span class="numero-2">_</span>
+
+                <span class="grau">°</span>C
+              </div>
+
+              <p>Temperatura Minima</p>
+            </div>
+          </div>
+
+          <div class="containder-clima-div minimo">
+            <div class="detalhes">
+              <div class="temperatura">
+                <span class="numero-3">_</span>
+
+                <span class="grau">°</span>C
+              </div>
+
+              <p>Temperatura Maxima</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

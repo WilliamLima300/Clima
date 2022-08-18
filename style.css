@@ -1,0 +1,226 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Configuração do Body centralizar os elementos*/
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #43AFFC;
+  background-image: url('./images/background.png');
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: 100% 100%;
+}
+
+/* Configuração da div main */
+
+.main{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: stretch;
+  width: 500px;
+  border-radius: 7px;
+  
+}
+
+/* Configuração do cabeçalho */
+
+.main header{
+  display: flex;
+  align-items: center;
+  margin: 5px auto;
+  font-size: 21px;
+  font-weight: 500;
+  color: #FFF;
+  padding: 4px;
+  font-size: 2.2rem;
+    
+}
+
+/* Configuração do botão de voltar */
+
+header i{
+  font-size: 0em;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.main.active header i{
+  margin-left: 5px;
+  font-size: 30px;
+}
+
+.main .main-input{
+  margin: 20px 25px 30px;
+}
+
+.main.active .main-input{
+  display: none;
+}
+
+/* Configuração das mensagens de carregamento e erros */
+
+.main-input .input-txt{
+  display: none;
+  font-size: 17px;
+  text-align: left;
+  padding: 12px 10px;
+  border-radius: 7px;
+  margin-bottom: 15px;
+}
+
+.main-input .input-txt.error{
+  color: #721c24;
+  display: block;
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+}
+
+.main-input .input-txt.pending{
+  color: #0c5460;
+  display: block;
+  background: #d1ecf1;
+  border: 1px solid #bee5eb;
+}
+
+.main-input :where(input, button){
+  width: 100%;
+  height: 55px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  border-radius: 7px;
+}
+
+/* Configuração da tag input */
+
+.main-input input{
+  text-align: left;
+  padding: 5px 10px;
+  border: 1px;
+  border-radius:50px;
+}
+
+.main-input input:is(:focus, :valid){
+  border: 2px solid #43AFFC;
+}
+
+.main-input input::placeholder{
+  color: #43AFFC;
+}
+
+/* Configuração do botão de geolocalização */
+
+.main-input button{
+  margin:10px 0;
+  border-radius:50px;
+  color: #fff;
+  cursor: pointer;
+  background: #43AFFC;
+  transition: 0.3s ease;
+}
+
+.main-input button:hover{
+  background: #1d9ffc;
+}
+
+/* Configuração dos resultados da API*/
+
+.main .main-clima{
+  display: none;
+  margin: 30px 0 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color:#FFF
+}
+
+.main.active .main-clima{
+  display: flex;
+}
+
+.main-clima img{
+  max-width: 125px;
+}/* Configuração do icone do clima*/
+
+
+.main-clima .temperatura{
+  display: flex;
+  font-weight: 500;
+  font-size: 72px;
+}
+
+.main-clima .temperatura .numero{
+  font-weight: 600;
+}
+
+.main-clima .temperatura .grau{
+  font-size: 40px;
+  display: block;
+  margin: 10px 5px 0 0;
+}
+
+.main-clima .clima{
+  font-size: 21px;
+  text-align: center;
+  margin: -5px 20px 15px;
+}
+
+.main-clima .local{
+  display: flex;
+  font-size: 2rem;
+  padding: 0 20px;
+  text-align: center;
+  margin-bottom: 30px;
+  align-items: flex-start;
+}
+
+.main-clima .containder-clima{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  border-top: 1px solid #ccc;
+}
+
+.containder-clima .containder-clima-div{
+  display: flex;
+  width: 100%;
+  padding: 15px 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.containder-clima-div.minimo{
+  border-left: 1px solid #ccc;
+}
+
+.containder-clima-div .detalhes{
+  margin-left: 3px;
+}
+
+.detalhes .temperatura, .minimo span{
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: -3px;
+}
+
+.detalhes .temperatura .grau{
+  margin: 0;
+  font-size: 17px;
+  padding: 0 2px 0 1px;
+}
+
+.containder-clima-div .detalhes p{
+  font-size: 14px;
+  margin-top: -6px;
+}
+
